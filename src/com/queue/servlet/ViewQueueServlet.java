@@ -18,7 +18,7 @@ public class ViewQueueServlet extends HttpServlet {
 
 
         try (Connection conn = DBConnection.getConnection()) {
-            String query = "SELECT t.token_id, u.name, t.status, t.issued_time " +
+            String query = "SELECT t.position, t.token_id, u.name, t.status, t.issued_time " +
                     "FROM Tokens t JOIN Users u ON t.user_id = u.user_id " +
                     "WHERE t.queue_id = ? ORDER BY t.issued_time ASC";
 
@@ -32,6 +32,7 @@ public class ViewQueueServlet extends HttpServlet {
                 token.put("tokenId", rs.getInt("token_id"));
                 token.put("userName", rs.getString("name"));
                 token.put("status", rs.getString("status"));
+                token.put("position", rs.getString("position"));
                 token.put("issuedTime", rs.getTimestamp("issued_time"));
                 tokenList.add(token);
             }
@@ -45,6 +46,7 @@ public class ViewQueueServlet extends HttpServlet {
 
 
         request.setAttribute("tokenList", tokenList);
+        request.setAttribute("queueId", queueId);
         RequestDispatcher rd = request.getRequestDispatcher("viewQueue.jsp");
         rd.forward(request, response);
     }

@@ -46,6 +46,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.queue.servlet.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>AdminSignupServlet</servlet-name>
         <servlet-class>com.queue.servlet.AdminSignupServlet</servlet-class>
     </servlet>
@@ -75,6 +85,16 @@
         <url-pattern>/viewQueueList</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CallNextServlet</servlet-name>
+        <servlet-class>com.queue.servlet.CallNextServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CallNextServlet</servlet-name>
+        <url-pattern>/callNext</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>com.queue.filter.AuthFilter</filter-class>
@@ -84,8 +104,5 @@
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/adminDashboard.jsp</url-pattern>
     </filter-mapping>
-
-
-
 
 </web-app>

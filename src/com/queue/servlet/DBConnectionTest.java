@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 
 
 //"C:\Program Files\Java\jdk-17\bin\jar.exe" -cvf DynamicQueueManagement.war *
-
+//\Dynamic Queue Management> javac -cp "web/WEB-INF/lib/*" -d DynamicQueueManagement.war/WEB-INF/classes src/com/queue/util/*.java src/com/queue/servlet/*.java src/com/queue/filter/*.java
 
 
 public class DBConnectionTest extends HttpServlet {

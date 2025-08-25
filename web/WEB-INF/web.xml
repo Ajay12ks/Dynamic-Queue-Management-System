@@ -85,6 +85,16 @@
         <url-pattern>/viewQueueList</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CallNextServlet</servlet-name>
+        <servlet-class>com.queue.servlet.CallNextServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CallNextServlet</servlet-name>
+        <url-pattern>/callNext</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>com.queue.filter.AuthFilter</filter-class>
