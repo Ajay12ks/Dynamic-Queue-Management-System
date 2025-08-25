@@ -21,7 +21,3 @@ Built using **Java Servlets, JSP, JDBC (MySQL), and Tomcat**.
 - **Database**: MySQL
 - **Server**: Apache Tomcat
 - **Version Control**: Git & GitHub
-
----
-
-## 📂 Project Structure
